@@ -1,0 +1,22 @@
+--- fftw3-3.2.1.orig/tools/fftw_wisdom.1.in	2009-03-17 14:46:42.000000000 +0100
++++ fftw3-3.2.1/tools/fftw_wisdom.1.in	2009-03-17 14:45:59.000000000 +0100
+@@ -24,7 +24,7 @@
+ [\fIOPTION\fR]... [\fISIZE\fR]...
+ .SH DESCRIPTION
+ .PP
+-." Add any additional description here
++.\" Add any additional description here
+ .I fftw@PREC_SUFFIX@-wisdom
+ is a utility to generate FFTW
+ .B wisdom
+--- fftw3-3.2.1.orig/tools/fftw-wisdom-to-conf.1	2008-11-11 02:18:10.000000000 +0100
++++ fftw3-3.2.1/tools/fftw-wisdom-to-conf.1	2009-03-17 14:45:27.000000000 +0100
+@@ -23,7 +23,7 @@
+ \fBfftw-wisdom-to-conf\fR [< \fIINPUT\fR] [> \fIOUTPUT\fR]
+ .SH DESCRIPTION
+ .PP
+-." Add any additional description here
++.\" Add any additional description here
+ .I fftw-wisdom-to-conf
+ is a utility to generate C
+ .B configuration

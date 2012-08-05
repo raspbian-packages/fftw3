@@ -1,0 +1,11 @@
+--- fftw3-3.1.2.orig/doc/fftw3.texi
++++ fftw3-3.1.2/doc/fftw3.texi
+@@ -88,7 +88,7 @@
+ @end quotation
+ @end copying
+ 
+-@dircategory Texinfo documentation system
++@dircategory Development 
+ @direntry
+ * fftw3: (fftw3).	FFTW User's Manual.
+ @end direntry
