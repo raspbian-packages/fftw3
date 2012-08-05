@@ -24,7 +24,7 @@ fftw@PREC_SUFFIX@-wisdom \- create wisdom (pre-optimized FFTs)
 [\fIOPTION\fR]... [\fISIZE\fR]...
 .SH DESCRIPTION
 .PP
-." Add any additional description here
+.\" Add any additional description here
 .I fftw@PREC_SUFFIX@-wisdom
 is a utility to generate FFTW
 .B wisdom
