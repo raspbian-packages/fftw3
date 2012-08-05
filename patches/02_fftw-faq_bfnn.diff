@@ -1,0 +1,11 @@
+--- fftw3-3.1.2.orig/doc/FAQ/fftw-faq.bfnn
++++ fftw3-3.1.2/doc/FAQ/fftw-faq.bfnn
+@@ -19,6 +19,7 @@
+ 
+ \endcopy
+ \copyto INFO
++INFO-DIR-SECTION Development
+ START-INFO-DIR-ENTRY
+ * FFTW FAQ: (fftw-faq). FFTW Frequently Asked Questions with Answers.
+ END-INFO-DIR-ENTRY
+

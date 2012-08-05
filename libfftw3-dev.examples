@@ -1,0 +1,5 @@
+tests/README
+tests/*.c
+tests/*.pl
+tests/*.am
+tests/*.in
