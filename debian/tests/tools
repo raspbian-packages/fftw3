@@ -1,0 +1,11 @@
+#!/bin/bash
+set -efu
+
+cd $ADTTMP
+
+# only float and double are available on all platforms
+fftwf-wisdom -n -o wisdom cof1024 cob1024 r4096
+fftw-wisdom-to-conf < wisdom > conf.c
+
+fftw-wisdom -n -o wisdom cof1024 cob1024 r4096
+fftw-wisdom-to-conf < wisdom > conf.c
