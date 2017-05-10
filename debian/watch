@@ -1,0 +1,5 @@
+version=4
+
+#opts=passive 
+#opts="
+opts="passive,uversionmangle=s/-pl/p/" ftp://ftp.fftw.org/pub/fftw/ fftw-([\.0-9]*-?pl?[0-9]?)\.tar\.gz

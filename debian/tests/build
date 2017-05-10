@@ -1,0 +1,56 @@
+#!/bin/bash
+set -efu
+
+cd $ADTTMP
+
+# only float and double are available on all platforms
+cat << EOF > double.c
+#include <fftw3.h>
+#include <math.h>
+#include <assert.h>
+#include <stdlib.h>
+int main(int argc, const char *argv[])
+{
+  int n = 1000;
+  double *in = fftw_malloc(sizeof(double) * n);
+
+  srand(3452);
+
+  for (int i = 0; i < n; i++) {
+    in[i] = rand() / (double)RAND_MAX;
+  }
+
+  int nc = (n / 2) + 1;
+  fftw_complex * out = fftw_malloc(sizeof(fftw_complex) * nc);
+  fftw_plan plan_forward = fftw_plan_dft_r2c_1d (n, in, out, FFTW_ESTIMATE);
+  fftw_execute(plan_forward);
+
+
+  double * in2 = fftw_malloc(sizeof(double) * n);
+  fftw_plan plan_backward = fftw_plan_dft_c2r_1d(n, out, in2, FFTW_ESTIMATE);
+  fftw_execute (plan_backward);
+
+  for (int i = 0; i < n; i++) { 
+    double diff = fabs((in2[i] / n) - in[i]);
+    assert(diff < PRECISION);
+  }
+  fftw_destroy_plan (plan_forward);
+  fftw_destroy_plan (plan_backward);
+
+  fftw_free (in);
+  fftw_free (in2);
+  fftw_free (out);
+
+  return 0;
+}
+EOF
+
+echo "smoke testing double library"
+gcc -std=c99 double.c -DPRECISION="1e-15" -lfftw3
+./a.out
+
+sed -e "s/double/float/g" -e "s/fftw_/fftwf_/g" double.c > float.c
+echo "smoke testing float library"
+gcc -std=c99 float.c  -DPRECISION="1e-6" -lfftw3f
+./a.out
+
