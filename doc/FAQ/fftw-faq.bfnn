@@ -12,7 +12,7 @@
 \call-html startup html.refs2
 \copyto ASCII
             FFTW FREQUENTLY ASKED QUESTIONS WITH ANSWERS
-                            `date '+%d %h %Y'`
+
 			     Matteo Frigo
 			   Steven G. Johnson
  			    <fftw@fftw.org>
@@ -28,7 +28,7 @@ END-INFO-DIR-ENTRY
 File: $prefix.info, Node: Top, Next: Question 1.1, Up: (dir)
 
             FFTW FREQUENTLY ASKED QUESTIONS WITH ANSWERS
-                            `date '+%d %h %Y'`
+
 			     Matteo Frigo
 			   Steven G. Johnson
 			    <fftw@fftw.org>
