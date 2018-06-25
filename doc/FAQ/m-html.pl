@@ -33,8 +33,6 @@ sub html_init {
     print HTML "<html>\n";
     $html_needpara= -1;
     $html_end='';
-    chop($html_date=`date '+%d %B %Y'`);
-    chop($html_year=`date '+%Y'`);
 }
 
 sub html_startup {
@@ -70,11 +68,10 @@ END
 }
 
 sub html_close {
-    print HTML $html_end,"<address>\n$user_author\n";
-    print HTML "- $html_date\n</address><br>\n";
+    print HTML $html_end,"<address>\n$user_author\n</address><br>\n";
     print HTML "Extracted from $user_title,\n";
     print HTML "<A href=\"$html_copyrighthref\">" if length($html_copyrighthref);
-    print HTML "Copyright &copy; $html_year $user_copyholder.";
+    print HTML "Copyright &copy; 2015 $user_copyholder.";
     print HTML "</A>" if length($html_copyrighthref);
     print HTML "\n</body></html>\n";
     close(HTML);
