@@ -1,0 +1,5 @@
+version=4
+
+# circumventing an apparent uscan but that introduces an extra "." or the non-matching (-pl[0-9]+)?)
+opts="uversionmangle=s/-pl/p/,uversionmangle=s/.$//" \
+ https://fftw.org/pub/fftw/ fftw-([\.0-9]+(-pl[0-9]+)?).tar\.gz
