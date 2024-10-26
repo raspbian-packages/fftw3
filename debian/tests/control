@@ -1,0 +1,5 @@
+Tests: tools
+Depends: libfftw3-bin
+
+Tests: build
+Depends: build-essential, libfftw3-dev
