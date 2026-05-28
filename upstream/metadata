@@ -1,0 +1,22 @@
+Bug-Database: https://github.com/FFTW/fftw3/issues
+Bug-Submit: https://github.com/FFTW/fftw3/issues/new
+Documentation: http://fftw.org/fftw3_doc/
+Repository: https://github.com/FFTW/fftw3.git
+Repository-Browse: https://github.com/FFTW/fftw3
+Reference:
+ - Author: Matteo Frigo and Steven G. Johnson
+   Title: The Design and Implementation of FFTW3
+   Booktitle: Proceedings of the IEEE. Special Issue on Program Generation, Optimization, and Platform Adaptation.
+   Volume: 93
+   Number: 2
+   Pages: 216–231
+   Year: 2005
+   URL: http://ieeexplore.ieee.org/xpl/tocresult.jsp?isNumber=30187&puNumber=5
+   ePrint: http://www.fftw.org/fftw-paper.ps.gz
+Registry:
+ - Name: OMICtools
+   Entry: NA
+ - Name: SciCrunch
+   Entry: SCR_016554
+ - Name: bio.tools
+   Entry: NA
